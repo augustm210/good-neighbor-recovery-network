@@ -1,0 +1,72 @@
+{
+  "scenario_id": "capacity-drop-001",
+  "seed": 20260817,
+  "donation": {
+    "donation_id": "donation-80",
+    "lots": [
+      {
+        "lot_id": "lot-cold-30",
+        "quantity": 30,
+        "available_at": "2026-08-18T16:30:00+08:00",
+        "expires_at": "2026-08-18T20:30:00+08:00",
+        "handling": "cold_chain"
+      },
+      {
+        "lot_id": "lot-ambient-50",
+        "quantity": 50,
+        "available_at": "2026-08-18T16:30:00+08:00",
+        "expires_at": "2026-08-18T20:30:00+08:00",
+        "handling": "ambient"
+      }
+    ]
+  },
+  "organizations": [
+    {
+      "organization_id": "org-a",
+      "capacity": 30,
+      "demand": 30,
+      "priority": 3,
+      "distance_km": 2.0,
+      "cold_chain": true,
+      "version": 1
+    },
+    {
+      "organization_id": "org-b",
+      "capacity": 35,
+      "demand": 35,
+      "priority": 2,
+      "distance_km": 1.5,
+      "cold_chain": false,
+      "version": 1
+    },
+    {
+      "organization_id": "org-c",
+      "capacity": 25,
+      "demand": 25,
+      "priority": 1,
+      "distance_km": 4.0,
+      "cold_chain": true,
+      "version": 1
+    },
+    {
+      "organization_id": "org-d",
+      "capacity": 20,
+      "demand": 20,
+      "priority": 0,
+      "distance_km": 5.5,
+      "cold_chain": false,
+      "version": 1
+    }
+  ],
+  "failure_event": {
+    "event_id": "capacity-drop-org-b-v2",
+    "at": "2026-08-18T17:10:00+08:00",
+    "type": "capacity_changed",
+    "organization_id": "org-b",
+    "new_capacity": 15,
+    "new_version": 2,
+    "idempotency_key": "event:capacity-drop-org-b-v2"
+  },
+  "autonomous_budget_usd": 20,
+  "recovery_route_cost_usd": 32
+}
