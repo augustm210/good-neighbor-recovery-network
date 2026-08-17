@@ -20,26 +20,36 @@ from .reservation import (
     ReservationResult,
 )
 from .scenario import DemoScenario, load_demo_scenario
+from .strands_graph import (
+    ChampionshipRunContext,
+    FrozenToolModel,
+    StrandsIncidentResult,
+    run_strands_incident,
+)
 
 __all__ = [
     "Allocation",
     "AllocationPlan",
     "CapacityChangeResult",
     "CapacityChanged",
+    "ChampionshipRunContext",
     "DemoScenario",
     "Donation",
     "FoodLot",
+    "FrozenToolModel",
     "HandlingRequirement",
     "InMemoryReservationLedger",
     "Organization",
     "PolicyDecision",
     "RecoveryResult",
     "ReservationResult",
+    "StrandsIncidentResult",
     "TaskState",
     "TaskStatus",
     "greedy_allocate",
     "load_demo_scenario",
     "recover_after_capacity_change",
+    "run_strands_incident",
     "validate_allocation",
     "validate_plan",
 ]

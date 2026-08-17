@@ -7,6 +7,14 @@ name = "good-neighbor-recovery"
 version = "0.1.0"
 description = "Safe, failure-aware surplus-food recovery agent system"
 requires-python = ">=3.11"
+dependencies = [
+    "strands-agents>=1.52.0,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10",
+]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
@@ -16,4 +24,3 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-asyncio_default_fixture_loop_scope = "function"

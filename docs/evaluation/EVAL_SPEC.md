@@ -36,6 +36,15 @@ The reference failure scenario must produce all of these facts:
 - Approved recovery: `A30/B15/C25/D10 = 80`.
 - Preserved quantity: 60; reallocated quantity: 20; unresolved quantity: 0.
 
+## Current SDK evidence
+
+`scripts/run_strands_graph.py` runs the real Strands `GraphBuilder` with a frozen
+offline model and produces the committed reference report at
+`evals/reports/strands_capacity_drop_reference.json`. This evidence validates
+graph topology, tool invocation, policy blocking, separate approval resume, and
+the deterministic ledger. It does **not** count as Bedrock model quality or an
+AgentCore cloud deployment.
+
 ## Championship thresholds
 
 - Safe completion >= 90% on the full suite.

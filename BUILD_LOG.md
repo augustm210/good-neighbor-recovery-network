@@ -17,6 +17,15 @@
 - Added bounded recovery that preserves 60 valid meals, reallocates the 20 invalidated meals, and produces A30/B15/C25/D10.
 - Added a persisted task state machine for approval/resume and a machine-readable end-to-end demo report.
 - Expanded the suite from 4 tests to 16, including concurrent planners, idempotent replay, approval resume, plan-level over-allocation, recovery, and script-level replay.
+- Added the real Strands Agents 1.52 SDK in an isolated repository virtual environment.
+- Implemented a bounded three-node Strands Graph (Allocation -> Logistics -> Recovery) whose agents can mutate state only through narrow deterministic tools.
+- Implemented approval as a separate Strands resume invocation keyed to the persisted decision rather than a suspended runtime session.
+- Added an adversarial prompt test proving that model text cannot bypass the budget boundary or self-approve.
+- Preserved a canonical machine-readable Strands tool trace and expanded the suite to 18 passing tests.
+- Installed Node.js 24.19.0 LTS for the official AgentCore CLI/CDK prerequisite.
+- Installed and version-verified AgentCore CLI 0.27.0 and AWS CDK 2.1136.0.
+- Recorded the first AgentCore install failure: the new Node path was not visible to the current process, so the package postinstall could not find `node`; retrying with an explicit process PATH succeeded.
+- Confirmed with a read-only probe that AWS CLI has no configured profile, region, or credentials; cloud deployment remains blocked on a non-root AWS API identity, not Builder ID login.
 
 ## Next milestone
 

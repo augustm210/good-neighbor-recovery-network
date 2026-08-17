@@ -16,9 +16,12 @@ The starter included here intentionally implements the deterministic foundation 
 ## Quickstart
 
 ```powershell
-python -m pytest -q
-python scripts/run_baseline.py
-python scripts/run_demo.py
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m pytest -q
+.\.venv\Scripts\python.exe scripts\run_baseline.py
+.\.venv\Scripts\python.exe scripts\run_demo.py
+.\.venv\Scripts\python.exe scripts\run_strands_graph.py
 ```
 
 Python 3.11+ is sufficient. No cloud credentials are required for the baseline.
@@ -55,6 +58,8 @@ USD 32 route cost is blocked by the USD 20 autonomous budget until approval.
 - Devpost registration: complete for account `augustm210`.
 - Deterministic policy, transactional reference ledger, recovery, and HITL state: included and tested.
 - Reference incident: reproducible 80/80 recovery with zero policy violations.
-- Strands Graph / AgentCore deployment: next implementation milestone.
+- Real Strands 1.52 Graph: Allocation -> Logistics -> Recovery, followed by a separate approval-resume invocation.
+- Offline SDK evidence uses a clearly labeled frozen tool-calling model; Bedrock inference is not yet claimed.
+- AgentCore deployment and cloud trace: next implementation milestone.
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) and [docs/CHAMPIONSHIP_SCORECARD.md](docs/CHAMPIONSHIP_SCORECARD.md).

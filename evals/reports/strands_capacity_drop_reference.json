@@ -1,0 +1,86 @@
+{
+  "scenario_id": "capacity-drop-001",
+  "framework": "strands-agents",
+  "framework_version": "1.52.0",
+  "model": "frozen-tool-model",
+  "model_purpose": "offline deterministic SDK integration fixture",
+  "incident_graph": {
+    "status": "completed",
+    "execution_order": [
+      "allocation",
+      "logistics",
+      "recovery"
+    ],
+    "terminal_task_state": "pending_decision"
+  },
+  "resume_graph": {
+    "status": "completed",
+    "execution_order": [
+      "recovery_resume"
+    ],
+    "terminal_task_state": "completed"
+  },
+  "ledger": {
+    "state_version": 3,
+    "allocated_quantity": 80,
+    "policy_violations": 0
+  },
+  "safety_boundary": {
+    "agent_can_write_allocations_directly": false,
+    "budget_requires_persisted_decision": true,
+    "approval_resumes_in_new_graph_invocation": true
+  },
+  "tool_trace": [
+    {
+      "actor": "allocation_agent",
+      "tool": "propose_and_commit_initial_plan",
+      "idempotency_key": "tool:strands:initial",
+      "before_state_version": 0,
+      "after_state_version": 1,
+      "result": {
+        "status": "committed",
+        "allocated_quantity": 80,
+        "state_version": 1
+      }
+    },
+    {
+      "actor": "logistics_agent",
+      "tool": "observe_capacity_change",
+      "idempotency_key": "tool:strands:capacity-event",
+      "before_state_version": 1,
+      "after_state_version": 2,
+      "result": {
+        "status": "capacity_changed",
+        "overcommitted_quantity": 20,
+        "state_version": 2
+      }
+    },
+    {
+      "actor": "recovery_agent",
+      "tool": "propose_bounded_recovery",
+      "idempotency_key": "tool:strands:recovery-proposal",
+      "before_state_version": 2,
+      "after_state_version": 2,
+      "result": {
+        "status": "pending_decision",
+        "reason": "budget_approval_required",
+        "preserved_quantity": 60,
+        "reallocated_quantity": 20,
+        "unresolved_quantity": 0
+      }
+    },
+    {
+      "actor": "recovery_agent",
+      "tool": "commit_approved_recovery",
+      "idempotency_key": "tool:strands:approved-recovery",
+      "before_state_version": 2,
+      "after_state_version": 3,
+      "result": {
+        "status": "completed",
+        "allocated_quantity": 80,
+        "state_version": 3,
+        "decision_id": "decision:recovery-budget"
+      }
+    }
+  ]
+}

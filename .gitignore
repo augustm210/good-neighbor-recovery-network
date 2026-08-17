@@ -7,6 +7,7 @@ __pycache__/
 !.env.example
 evals/reports/*.json
 evals/reports/*.csv
+!evals/reports/strands_capacity_drop_reference.json
 dist/
 build/
-
+*.egg-info/

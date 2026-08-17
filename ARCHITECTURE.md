@@ -39,6 +39,27 @@ Agents propose plans in an uncertain space. Deterministic code validates and exe
 The in-memory ledger is not the production datastore. DynamoDB conditional
 transactions must preserve the same contract in the AWS vertical slice.
 
+## Implemented Strands vertical slice
+
+The local integration uses the real Strands Agents 1.52 SDK and `GraphBuilder`:
+
+```text
+incident invocation
+  Allocation Agent -> Logistics Agent -> Recovery Agent
+                                      -> PENDING_DECISION (run ends)
+
+approval-resume invocation
+  Recovery Resume Agent -> policy validates persisted decision -> atomic commit
+```
+
+Each agent can call only its narrow deterministic tool. The offline frozen model
+is an integration fixture that deterministically exercises the Strands agent
+loop; it is not presented as Bedrock inference. A prompt that asks the agent to
+bypass budget policy still terminates at `PENDING_DECISION`.
+
+The canonical machine-readable local trace is
+[`evals/reports/strands_capacity_drop_reference.json`](evals/reports/strands_capacity_drop_reference.json).
+
 ## Planned AWS footprint
 
 - Amazon Bedrock for model inference.

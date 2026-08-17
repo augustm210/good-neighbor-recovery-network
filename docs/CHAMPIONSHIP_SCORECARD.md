@@ -4,7 +4,7 @@ Update this file with links to visible evidence, not confidence statements.
 
 | Dimension | Evidence required | Current evidence | Status |
 |---|---|---|---|
-| Technical Implementation | Strands Graph, hooks, idempotency, recovery trace, AgentCore deployment | Lot-level plan policy, atomic/versioned reference ledger, bounded recovery, HITL state, 16 tests | In progress |
+| Technical Implementation | Strands Graph, hooks, idempotency, recovery trace, AgentCore deployment | Real Strands 1.52 Graph, narrow tools, atomic/versioned ledger, bounded recovery, separate HITL resume, [reference trace](../evals/reports/strands_capacity_drop_reference.json), 18 tests; cloud deployment pending | In progress |
 | Design | Operations, Activity, Decisions pages; ten-second comprehension test | Demo contract only | Not started |
 | Potential Impact | 5+ interviews, 2 usability sessions, measured time/waste outcomes | Impact metric contract plus [AI-simulated red-team](research/AI_SIMULATED_REVIEW_PANEL.md) (not user evidence) | Not started |
 | Creativity | Time decay, multi-org allocation, failure-aware patching, baseline lift | Executable minimal-change recovery reference; baseline lift still pending | In progress |
