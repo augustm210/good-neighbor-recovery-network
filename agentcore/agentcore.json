@@ -1,0 +1,45 @@
+{
+  "name": "GoodNeighbor",
+  "version": 1,
+  "managedBy": "CDK",
+  "tags": {
+    "Project": "agents-for-humans",
+    "Purpose": "HackathonDevelopment"
+  },
+  "runtimes": [
+    {
+      "name": "good_neighbor_runtime",
+      "description": "Bounded surplus-food capacity-drop recovery demonstration",
+      "build": "Container",
+      "entrypoint": "src/good_neighbor/agentcore_app.py",
+      "codeLocation": ".",
+      "buildContextPath": ".",
+      "dockerfile": "infrastructure/agentcore/Dockerfile",
+      "runtimeVersion": "PYTHON_3_12",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP",
+      "authorizerType": "AWS_IAM",
+      "instrumentation": {
+        "enableOtel": false
+      },
+      "lifecycleConfiguration": {
+        "idleRuntimeSessionTimeout": 300,
+        "maxLifetime": 900
+      },
+      "tags": {
+        "Project": "agents-for-humans",
+        "Purpose": "HackathonDevelopment"
+      }
+    }
+  ],
+  "memories": [],
+  "knowledgeBases": [],
+  "credentials": [],
+  "evaluators": [],
+  "onlineEvalConfigs": [],
+  "agentCoreGateways": [],
+  "policyEngines": [],
+  "configBundles": [],
+  "abTests": [],
+  "harnesses": []
+}

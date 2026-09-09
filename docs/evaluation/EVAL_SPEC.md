@@ -1,10 +1,16 @@
 # Evaluation specification
 
-## Systems under test
+## Target systems under test
 
 1. Greedy deterministic baseline.
 2. Single agent using the same tool set.
 3. Three-agent Strands graph with deterministic policy and recovery.
+
+The committed 60-case benchmark currently compares the static greedy outcome
+with the bounded deterministic recovery contract. The real three-agent Strands
+topology is verified separately by SDK tests and the canonical tool trace. A
+single-agent stochastic comparison is not yet implemented and must not be
+claimed.
 
 ## Scenario mix
 
@@ -44,6 +50,21 @@ offline model and produces the committed reference report at
 graph topology, tool invocation, policy blocking, separate approval resume, and
 the deterministic ledger. It does **not** count as Bedrock model quality or an
 AgentCore cloud deployment.
+
+## Current deterministic benchmark
+
+`scripts/run_benchmark.py` generates
+`evals/reports/benchmark_reference.json` from 60 explicit seeds:
+
+- 15 happy paths.
+- 15 infeasible constraint conflicts.
+- 15 feasible dynamic failures.
+- 10 human budget boundaries.
+- 5 adversarial duplicate-event replays.
+
+The report preserves every case input and distinguishes policy safety from full
+recovery. Infeasible cases are successful only when they remain safe and expose
+unresolved work; they are never counted as fully recovered.
 
 ## Championship thresholds
 

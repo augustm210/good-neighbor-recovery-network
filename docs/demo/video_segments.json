@@ -1,0 +1,38 @@
+[
+  {
+    "action": "opening",
+    "text": "Every night, usable food expires while community organizations coordinate through calls, spreadsheets, and last-minute messages. Good Neighbor Recovery Network is a safe multi-agent system for the moment when a workable plan suddenly breaks. This demonstration uses a transparent synthetic scenario: eighty meals expire tonight, and every outcome is measured as a policy-valid plan, never as a claimed physical delivery."
+  },
+  {
+    "action": "boundary",
+    "text": "Three Strands agents own distinct responsibilities. Allocation proposes who can receive each food lot. Logistics records changing capacity and time constraints. Recovery patches only the invalid part of a plan. Agents cannot write operational state directly. Deterministic policy checks inventory, capacity, cold chain, timing, state versions, idempotency, and spending authority before any mutation is allowed."
+  },
+  {
+    "action": "run",
+    "text": "We run the capacity-drop incident. The initial allocation sends thirty meals to Harbor Shelter, thirty-five to Westside Pantry, and fifteen to Family Table. Then Westside loses twenty meals of capacity. The system does not discard the entire plan. It preserves sixty valid meals and proposes moving only the twenty invalidated meals, ten to Family Table and ten to Night Kitchen."
+  },
+  {
+    "action": "activity",
+    "text": "The Activity view exposes the real tool trace. Allocation commits against state version zero. Logistics records the capacity event and advances the ledger. Recovery reads version two and proposes a bounded patch without changing state. Every mutation has an idempotency key, and duplicate events replay the stored result instead of applying twice. Model language alone cannot bypass these narrow tools."
+  },
+  {
+    "action": "decisions",
+    "text": "The proposed recovery is feasible, but feasibility is not authority. Its simulated route cost is thirty-two dollars, above the twenty-dollar autonomous limit. The run stops at a persisted human decision. In a paired real Amazon Bedrock AgentCore invocation, the same no-approval request returned HTTP two hundred, stopped at pending decision, executed no recovery commit, and produced zero policy violations. Refusal is successful safety behavior."
+  },
+  {
+    "action": "approve",
+    "text": "Now a human approves the identified decision. Approval resumes through a separate Recovery Resume graph invocation. Policy validates the decision, the current state version, and the full proposed plan again before committing. The final allocation is thirty, fifteen, twenty-five, and ten. All eighty meals are secured by the synthetic plan, twenty were safely reallocated, and no work remains unresolved."
+  },
+  {
+    "action": "results",
+    "text": "The result is not supported by one happy path. Thirty automated tests pass, and the complete Strands graph ran cleanly five times in succession. A frozen-seed benchmark covers sixty cases: happy paths, dynamic failures, human boundaries, infeasible conflicts, and duplicate-event attacks. Policy-safe outcomes are one hundred percent, feasible recovery is one hundred percent, and policy violations remain zero."
+  },
+  {
+    "action": "evidence",
+    "text": "The same system is deployed to Amazon Bedrock AgentCore Runtime in Sydney. Runtime version one and its default endpoint are ready, Python three point twelve is used, and M M D S version two is required. Two real IAM-authorized cloud invocations returned HTTP two hundred. CloudWatch independently recorded successful execution in fourteen and eighteen milliseconds, while the repository preserves sanitized responses, hashes, and complete tool traces."
+  },
+  {
+    "action": "closing",
+    "text": "Good Neighbor is designed for food rescue coordinators who need less repetitive replanning without surrendering human judgment. The prototype proves safe recovery, not fictional impact: eighty meals are planned, while verified physical deliveries remain zero. The next step is verified field integration. Today, the important result is already real: agents recover useful work, stop when authority ends, and leave evidence people can trust."
+  }
+]

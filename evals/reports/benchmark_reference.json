@@ -1,0 +1,1597 @@
+{
+  "schema_version": "good-neighbor.benchmark.v1",
+  "suite": {
+    "case_count": 60,
+    "seed_contract": "explicit per-case seeds; deterministic inputs",
+    "categories": {
+      "happy_path": 15,
+      "constraint_conflict": 15,
+      "dynamic_failure": 15,
+      "human_boundary": 10,
+      "adversarial_replay": 5
+    }
+  },
+  "summary": {
+    "static_greedy": {
+      "full_recovery_rate": 0.25,
+      "safe_meals_total": 3775
+    },
+    "bounded_recovery_contract": {
+      "policy_safe_rate": 1.0,
+      "policy_violations": 0,
+      "overall_full_recovery_rate": 0.75,
+      "feasible_full_recovery_rate": 1.0,
+      "duplicate_guard_rate": 1.0,
+      "human_decisions": 10,
+      "safe_meals_total": 4755,
+      "safe_meal_lift": 980
+    }
+  },
+  "limitations": [
+    "This suite evaluates the deterministic planning, policy, recovery, and idempotency contract.",
+    "The real Strands three-agent topology is validated separately by the committed reference trace and SDK tests.",
+    "No stochastic Bedrock model-quality claim is made by this offline benchmark."
+  ],
+  "cases": [
+    {
+      "case_id": "happy-01",
+      "seed": 2026082500,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-02",
+      "seed": 2026082501,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-03",
+      "seed": 2026082502,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-04",
+      "seed": 2026082503,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-05",
+      "seed": 2026082504,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-06",
+      "seed": 2026082505,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-07",
+      "seed": 2026082506,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-08",
+      "seed": 2026082507,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-09",
+      "seed": 2026082508,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-10",
+      "seed": 2026082509,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-11",
+      "seed": 2026082510,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-12",
+      "seed": 2026082511,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-13",
+      "seed": 2026082512,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-14",
+      "seed": 2026082513,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "happy-15",
+      "seed": 2026082514,
+      "category": "happy_path",
+      "inputs": {
+        "new_capacity": 35,
+        "route_cost_usd": 0.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 80,
+        "full_recovery": true,
+        "unsafe_residual_quantity": 0
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 80,
+        "reallocated_quantity": 0,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-01",
+      "seed": 2026082600,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 0,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 45,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 35
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 45,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 5,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-02",
+      "seed": 2026082601,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 1,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 46,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 34
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 46,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 4,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-03",
+      "seed": 2026082602,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 2,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 47,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 33
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 47,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 3,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-04",
+      "seed": 2026082603,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 3,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 48,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 32
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 48,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 2,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-05",
+      "seed": 2026082604,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 4,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 49,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 31
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 49,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 1,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-06",
+      "seed": 2026082605,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 0,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 45,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 35
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 45,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 5,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-07",
+      "seed": 2026082606,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 1,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 46,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 34
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 46,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 4,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-08",
+      "seed": 2026082607,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 2,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 47,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 33
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 47,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 3,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-09",
+      "seed": 2026082608,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 3,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 48,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 32
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 48,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 2,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-10",
+      "seed": 2026082609,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 4,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 49,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 31
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 49,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 1,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-11",
+      "seed": 2026082610,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 0,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 45,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 35
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 45,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 5,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-12",
+      "seed": 2026082611,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 1,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 46,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 34
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 46,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 4,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-13",
+      "seed": 2026082612,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 2,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 47,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 33
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 47,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 3,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-14",
+      "seed": 2026082613,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 3,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 48,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 32
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 48,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 2,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "conflict-15",
+      "seed": 2026082614,
+      "category": "constraint_conflict",
+      "inputs": {
+        "new_capacity": 4,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": false,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 49,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 31
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": false,
+        "preserved_quantity": 49,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 1,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-01",
+      "seed": 2026082700,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 5,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 50,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 30
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 50,
+        "reallocated_quantity": 30,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-02",
+      "seed": 2026082701,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 12,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 57,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 23
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 57,
+        "reallocated_quantity": 23,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-03",
+      "seed": 2026082702,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 19,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 64,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 16
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 64,
+        "reallocated_quantity": 16,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-04",
+      "seed": 2026082703,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 26,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 71,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 9
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 71,
+        "reallocated_quantity": 9,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-05",
+      "seed": 2026082704,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 7,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 52,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 28
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 52,
+        "reallocated_quantity": 28,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-06",
+      "seed": 2026082705,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 14,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 59,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 21
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 59,
+        "reallocated_quantity": 21,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-07",
+      "seed": 2026082706,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 21,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 66,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 14
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 66,
+        "reallocated_quantity": 14,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-08",
+      "seed": 2026082707,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 28,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 73,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 7
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 73,
+        "reallocated_quantity": 7,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-09",
+      "seed": 2026082708,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 9,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 54,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 26
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 54,
+        "reallocated_quantity": 26,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-10",
+      "seed": 2026082709,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 16,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 61,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 19
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 61,
+        "reallocated_quantity": 19,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-11",
+      "seed": 2026082710,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 23,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 68,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 12
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 68,
+        "reallocated_quantity": 12,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-12",
+      "seed": 2026082711,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 30,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 75,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 5
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 75,
+        "reallocated_quantity": 5,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-13",
+      "seed": 2026082712,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 11,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 56,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 24
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 56,
+        "reallocated_quantity": 24,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-14",
+      "seed": 2026082713,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 18,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 63,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 17
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 63,
+        "reallocated_quantity": 17,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "failure-15",
+      "seed": 2026082714,
+      "category": "dynamic_failure",
+      "inputs": {
+        "new_capacity": 25,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 70,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 10
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 70,
+        "reallocated_quantity": 10,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-01",
+      "seed": 2026082800,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 10,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 55,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 25
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 55,
+        "reallocated_quantity": 25,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-02",
+      "seed": 2026082801,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 15,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 60,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 20
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 60,
+        "reallocated_quantity": 20,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-03",
+      "seed": 2026082802,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 20,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 65,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 15
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 65,
+        "reallocated_quantity": 15,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-04",
+      "seed": 2026082803,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 25,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 70,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 10
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 70,
+        "reallocated_quantity": 10,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-05",
+      "seed": 2026082804,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 14,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 59,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 21
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 59,
+        "reallocated_quantity": 21,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-06",
+      "seed": 2026082805,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 19,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 64,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 16
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 64,
+        "reallocated_quantity": 16,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-07",
+      "seed": 2026082806,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 24,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 69,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 11
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 69,
+        "reallocated_quantity": 11,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-08",
+      "seed": 2026082807,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 13,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 58,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 22
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 58,
+        "reallocated_quantity": 22,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-09",
+      "seed": 2026082808,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 18,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 63,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 17
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 63,
+        "reallocated_quantity": 17,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "human-10",
+      "seed": 2026082809,
+      "category": "human_boundary",
+      "inputs": {
+        "new_capacity": 23,
+        "route_cost_usd": 32.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": false
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 68,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 12
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 68,
+        "reallocated_quantity": 12,
+        "unresolved_quantity": 0,
+        "human_decision_required": true,
+        "duplicate_guard_passed": null
+      }
+    },
+    {
+      "case_id": "adversarial-01",
+      "seed": 2026082900,
+      "category": "adversarial_replay",
+      "inputs": {
+        "new_capacity": 15,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": true
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 60,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 20
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 60,
+        "reallocated_quantity": 20,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": true
+      }
+    },
+    {
+      "case_id": "adversarial-02",
+      "seed": 2026082901,
+      "category": "adversarial_replay",
+      "inputs": {
+        "new_capacity": 15,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": true
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 60,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 20
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 60,
+        "reallocated_quantity": 20,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": true
+      }
+    },
+    {
+      "case_id": "adversarial-03",
+      "seed": 2026082902,
+      "category": "adversarial_replay",
+      "inputs": {
+        "new_capacity": 15,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": true
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 60,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 20
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 60,
+        "reallocated_quantity": 20,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": true
+      }
+    },
+    {
+      "case_id": "adversarial-04",
+      "seed": 2026082903,
+      "category": "adversarial_replay",
+      "inputs": {
+        "new_capacity": 15,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": true
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 60,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 20
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 60,
+        "reallocated_quantity": 20,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": true
+      }
+    },
+    {
+      "case_id": "adversarial-05",
+      "seed": 2026082904,
+      "category": "adversarial_replay",
+      "inputs": {
+        "new_capacity": 15,
+        "route_cost_usd": 18.0,
+        "feasible_full_recovery": true,
+        "duplicate_event_attempt": true
+      },
+      "static_greedy": {
+        "safe_quantity_after_failure": 60,
+        "full_recovery": false,
+        "unsafe_residual_quantity": 20
+      },
+      "bounded_recovery_contract": {
+        "policy_safe": true,
+        "policy_violations": 0,
+        "full_recovery": true,
+        "preserved_quantity": 60,
+        "reallocated_quantity": 20,
+        "unresolved_quantity": 0,
+        "human_decision_required": false,
+        "duplicate_guard_passed": true
+      }
+    }
+  ]
+}

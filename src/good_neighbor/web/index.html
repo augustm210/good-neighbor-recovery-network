@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Good Neighbor safe surplus-food recovery agent demo" />
+    <title>Good Neighbor · Recovery Control</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="Good Neighbor home">
+          <span class="brand-mark">GN</span>
+          <span><strong>Good Neighbor</strong><small>Recovery Network</small></span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <button class="nav-item active" data-view="operations"><span>01</span>Operations</button>
+          <button class="nav-item" data-view="activity"><span>02</span>Activity</button>
+          <button class="nav-item" data-view="decisions"><span>03</span>Decisions <b id="decision-count">0</b></button>
+        </nav>
+        <div class="safety-card">
+          <span class="status-dot"></span>
+          <div><strong>Policy boundary active</strong><small>Deterministic checks own every write.</small></div>
+        </div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div><p class="eyebrow">LIVE INCIDENT · SYDNEY DEMO</p><h1 id="page-title">Recovery operations</h1></div>
+          <div class="top-actions">
+            <span class="stage-pill" id="stage-pill">Ready</span>
+            <button class="button ghost" id="reset-button">Reset</button>
+          </div>
+        </header>
+
+        <section class="view active" id="operations-view">
+          <div class="hero">
+            <div>
+              <p class="eyebrow orange">CAPACITY DROP PLAYBOOK</p>
+              <h2>80 meals expire tonight.<br />The plan has minutes to recover.</h2>
+              <p>Three bounded agents coordinate allocation, logistics and recovery. Humans only enter when a real decision crosses the safe autonomy budget.</p>
+              <button class="button primary" id="start-button">Run capacity-drop incident <span>→</span></button>
+            </div>
+            <div class="hero-orbit" aria-label="Three agent recovery graph">
+              <div class="orbit-center"><strong id="orbit-number">80</strong><span>meals</span></div>
+              <div class="agent-node allocation"><b>A</b><span>Allocation</span></div>
+              <div class="agent-node logistics"><b>L</b><span>Logistics</span></div>
+              <div class="agent-node recovery"><b>R</b><span>Recovery</span></div>
+            </div>
+          </div>
+
+          <div class="metric-grid">
+            <article><span>Meals secured</span><strong id="meals-metric">0 / 80</strong><small id="meals-caption">Ready to coordinate</small></article>
+            <article><span>Work preserved</span><strong id="preserved-metric">—</strong><small>Minimal-change recovery</small></article>
+            <article><span>Policy violations</span><strong class="safe" id="violations-metric">0</strong><small>Hard constraints enforced</small></article>
+            <article><span>Human decisions</span><strong id="decisions-metric">0</strong><small>Only above autonomy limit</small></article>
+          </div>
+
+          <div class="content-grid">
+            <article class="panel allocation-panel">
+              <div class="panel-heading"><div><p class="eyebrow">ACTIVE ALLOCATION</p><h3>Community capacity</h3></div><span id="allocation-status" class="mini-pill">Awaiting run</span></div>
+              <div class="allocation-list" id="allocation-list">
+                <div class="empty-state">Run the incident to see the safe allocation move through the network.</div>
+              </div>
+            </article>
+            <article class="panel boundary-panel">
+              <div class="panel-heading"><div><p class="eyebrow">AUTONOMY BOUNDARY</p><h3>What agents cannot do</h3></div></div>
+              <ul class="boundary-list">
+                <li><span>✓</span><div><strong>Propose a recovery patch</strong><small>Agents explore uncertain logistics.</small></div></li>
+                <li><span>✓</span><div><strong>Preserve valid work</strong><small>Only invalid allocations are moved.</small></div></li>
+                <li><span>✓</span><div><strong>Agent cannot self-approve extra spend</strong><small>USD 32 exceeds the USD 20 limit.</small></div></li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="activity-view">
+          <div class="section-intro"><p class="eyebrow orange">VERIFIABLE AUTONOMY</p><h2>Every proposal, check and mutation leaves evidence.</h2><p>The model can propose. Only narrow tools and deterministic policy can change state.</p></div>
+          <div class="trace" id="trace-list"><div class="empty-state">No activity yet. Run the incident from Operations.</div></div>
+        </section>
+
+        <section class="view" id="decisions-view">
+          <div class="section-intro"><p class="eyebrow orange">HUMAN-IN-THE-LOOP</p><h2>Attention only when judgment matters.</h2><p>The run stops cleanly; approval resumes in a new, versioned graph invocation.</p></div>
+          <article class="decision-card" id="decision-card">
+            <div class="decision-icon">$</div>
+            <div class="decision-copy"><p class="eyebrow">NO PENDING DECISION</p><h3>Run the incident to trigger the budget boundary.</h3><p>The Recovery Agent will propose a safe route patch without executing it.</p></div>
+            <button class="button primary" id="approve-button" disabled>Approve USD 32 recovery</button>
+          </article>
+        </section>
+
+        <footer><span>Good Neighbor Recovery Network</span><span>Strands Agents · deterministic policy · idempotent tools</span></footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

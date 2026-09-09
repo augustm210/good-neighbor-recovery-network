@@ -28,3 +28,7 @@ Current read-only probe: `aws sts get-caller-identity` returns `NoCredentials`.
 Do not solve this with long-lived access keys or by deploying as root. Use an
 approved non-root console/IAM Identity Center identity with temporary
 credentials and record the target account and region before bootstrap.
+
+The reviewed hackathon identity and permission plan is documented in
+[`iam/README.md`](iam/README.md). The checked-in JSON contains no account ID or
+credentials and can be audited before it is created in IAM.

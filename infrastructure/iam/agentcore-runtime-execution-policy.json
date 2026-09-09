@@ -1,0 +1,65 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ECRImageAccess",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:BatchGetImage",
+        "ecr:GetDownloadUrlForLayer"
+      ],
+      "Resource": "arn:aws:ecr:ap-southeast-2:ACCOUNT_ID:repository/bedrock-agentcore-good-neighbor"
+    },
+    {
+      "Sid": "ECRTokenAccess",
+      "Effect": "Allow",
+      "Action": "ecr:GetAuthorizationToken",
+      "Resource": "*"
+    },
+    {
+      "Sid": "DirectCodeArtifactBucketLocation",
+      "Effect": "Allow",
+      "Action": "s3:GetBucketLocation",
+      "Resource": "arn:aws:s3:::bedrock-agentcore-code-ACCOUNT_ID-ap-southeast-2"
+    },
+    {
+      "Sid": "DirectCodeArtifactRead",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion"
+      ],
+      "Resource": "arn:aws:s3:::bedrock-agentcore-code-ACCOUNT_ID-ap-southeast-2/good_neighbor_runtime/*"
+    },
+    {
+      "Sid": "RuntimeLogGroupAccess",
+      "Effect": "Allow",
+      "Action": [
+        "logs:DescribeLogStreams",
+        "logs:CreateLogGroup"
+      ],
+      "Resource": "arn:aws:logs:ap-southeast-2:ACCOUNT_ID:log-group:/aws/bedrock-agentcore/runtimes/*"
+    },
+    {
+      "Sid": "RuntimeLogResourcePolicy",
+      "Effect": "Allow",
+      "Action": "logs:PutResourcePolicy",
+      "Resource": "arn:aws:logs:ap-southeast-2:ACCOUNT_ID:log-group:/aws/bedrock-agentcore/runtimes/good_neighbor_runtime-*"
+    },
+    {
+      "Sid": "DescribeRuntimeLogGroups",
+      "Effect": "Allow",
+      "Action": "logs:DescribeLogGroups",
+      "Resource": "arn:aws:logs:ap-southeast-2:ACCOUNT_ID:log-group:*"
+    },
+    {
+      "Sid": "RuntimeLogStreamAccess",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:ap-southeast-2:ACCOUNT_ID:log-group:/aws/bedrock-agentcore/runtimes/*:log-stream:*"
+    }
+  ]
+}

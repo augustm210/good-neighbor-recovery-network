@@ -19,6 +19,30 @@ flowchart LR
     V --> S[(State and Audit)]
 ```
 
+## Judge-facing vertical slice
+
+```mermaid
+flowchart TB
+    J[Judge / coordinator] --> UI[Operations · Activity · Decisions]
+    UI --> API[Idempotent demo HTTP actions]
+    API --> SG[Real Strands Graph]
+    SG --> AA[Allocation Agent]
+    SG --> LA[Logistics Agent]
+    SG --> RA[Recovery Agent]
+    AA & LA & RA --> DP[Deterministic policy + versioned ledger]
+    DP -->|USD 32 > USD 20| HITL[Persisted human decision]
+    HITL --> RG[Separate approval-resume graph]
+    RG --> DP
+    DP --> TRACE[Machine-readable audit trace]
+    API -. same contract .-> AC[AgentCore HTTP Runtime READY]
+    AC --> S3[30.3 MB Direct Code ZIP in Sydney S3]
+    ECR[Verified ARM64 image in Sydney ECR] -. reproducible alternative .-> AC
+```
+
+The local judge UI and AgentCore adapter call the same bounded incident
+contract. A cloud deployment changes the hosting boundary, not the safety
+semantics.
+
 ## Boundary that matters
 
 Agents propose plans in an uncertain space. Deterministic code validates and executes state changes. This prevents a plausible-sounding model response from becoming an unsafe action.
@@ -60,15 +84,18 @@ bypass budget policy still terminates at `PENDING_DECISION`.
 The canonical machine-readable local trace is
 [`evals/reports/strands_capacity_drop_reference.json`](evals/reports/strands_capacity_drop_reference.json).
 
-## Planned AWS footprint
+## AWS footprint
 
-- Amazon Bedrock for model inference.
-- Bedrock AgentCore Runtime for deployable agent execution and technical-evidence depth.
-- DynamoDB for task state, idempotency records, and decisions.
-- S3 for synthetic datasets and evaluation reports.
-- CloudWatch for structured logs and run-level metrics.
+- Implemented: Sydney ECR repository and a single-manifest `linux/arm64` image.
+- Implemented: 30.3 MB Linux ARM64-compatible Direct Code ZIP in a private Sydney S3 bucket.
+- Implemented: least-privilege AgentCore execution role for ECR, the single S3 deployment prefix, and Runtime logs.
+- Implemented: AgentCore HTTP adapter with `/ping` and `/invocations` through the official SDK.
+- Implemented: Python 3.12 AgentCore Runtime version 1 is `READY` with MMDSv2 required.
+- Implemented: a real `DEFAULT` endpoint invocation returned HTTP 200 and CloudWatch recorded successful completion in 0.018 seconds; the sanitized response and complete tool trace are committed as evaluation evidence.
+- Not claimed: production DynamoDB persistence, physical delivery verification, or stochastic Bedrock model quality.
 
-The first deployment should use one region and the minimum number of services needed for a reproducible demo.
+The deployment stays in one region and uses the minimum services needed for a
+reproducible demo.
 
 ## Agent contracts
 

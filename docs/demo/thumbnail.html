@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Good Neighbor demo thumbnail</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1280px; height: 720px; overflow: hidden; }
+    body { font-family: Inter, "Segoe UI", sans-serif; color: #f8fafc; background: #0b281f; }
+    .canvas { position: relative; width: 100%; height: 100%; padding: 62px 70px; overflow: hidden; }
+    .canvas::before { content: ""; position: absolute; width: 720px; height: 720px; border: 1px solid rgba(125,211,252,.17); border-radius: 50%; right: -210px; top: -170px; box-shadow: 0 0 0 72px rgba(125,211,252,.035), 0 0 0 148px rgba(125,211,252,.025); }
+    .eyebrow { display: flex; gap: 14px; align-items: center; color: #7dd3fc; font-weight: 750; font-size: 18px; letter-spacing: .16em; }
+    .mark { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 12px; background: #ff6b2c; color: #fff; letter-spacing: 0; box-shadow: 0 12px 32px rgba(255,107,44,.32); }
+    h1 { width: 760px; margin: 52px 0 18px; font-size: 82px; line-height: .94; letter-spacing: -.055em; }
+    h1 span { color: #ff6b2c; }
+    .sub { width: 670px; margin: 0; color: #d5e8df; font-size: 27px; line-height: 1.35; font-weight: 520; }
+    .pills { display: flex; gap: 12px; margin-top: 38px; }
+    .pill { padding: 11px 16px; border-radius: 999px; border: 1px solid rgba(213,232,223,.28); color: #d5e8df; font-size: 15px; font-weight: 700; }
+    .evidence { position: absolute; right: 70px; bottom: 70px; width: 360px; padding: 28px; border-radius: 28px; background: #ff6b2c; box-shadow: 0 28px 60px rgba(0,0,0,.3); transform: rotate(-2deg); }
+    .evidence small { font-weight: 800; letter-spacing: .15em; }
+    .evidence strong { display: block; margin: 16px 0 4px; font-size: 52px; line-height: 1; }
+    .evidence span { font-size: 20px; font-weight: 750; }
+    .safe { position: absolute; right: 82px; top: 92px; width: 285px; padding: 19px 22px; border-radius: 18px; color: #0b281f; background: #d5f4e7; font-size: 18px; font-weight: 800; transform: rotate(2deg); }
+    .safe::before { content: "✓"; margin-right: 10px; color: #08735b; }
+    footer { position: absolute; left: 70px; bottom: 34px; color: rgba(213,232,223,.7); font-size: 14px; letter-spacing: .08em; }
+  </style>
+</head>
+<body>
+  <main class="canvas">
+    <div class="eyebrow"><span class="mark">GN</span> GOOD NEIGHBOR · AGENTS FOR HUMANS</div>
+    <h1>SAFE AGENTS.<br><span>REAL AWS.</span></h1>
+    <p class="sub">Recover useful work when plans break—without surrendering human judgment.</p>
+    <div class="pills"><span class="pill">3 STRANDS AGENTS</span><span class="pill">HUMAN APPROVAL</span><span class="pill">0 VIOLATIONS</span></div>
+    <div class="safe">Agent cannot self-approve spend</div>
+    <section class="evidence"><small>AGENTCORE · SYDNEY</small><strong>2× HTTP 200</strong><span>Paired cloud invocations</span></section>
+    <footer>60 FROZEN-SEED CASES · 100% POLICY-SAFE · VERIFIED EVIDENCE</footer>
+  </main>
+</body>
+</html>

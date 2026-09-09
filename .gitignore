@@ -8,6 +8,15 @@ __pycache__/
 evals/reports/*.json
 evals/reports/*.csv
 !evals/reports/strands_capacity_drop_reference.json
+!evals/reports/benchmark_reference.json
+!evals/reports/agentcore_cloud_invocation_reference.json
+!evals/reports/agentcore_cloud_boundary_reference.json
 dist/
 build/
 *.egg-info/
+agentcore/.env.local
+agentcore/aws-targets.json
+agentcore/deployed-state.json
+agentcore/.cli/
+agentcore/cdk/cdk.out/
+agentcore/cdk/node_modules/
