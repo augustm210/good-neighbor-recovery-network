@@ -7,15 +7,18 @@ Official deadline: September 14, 2026 at 5:00 PM PDT.
 - [x] Public GitHub repository: https://github.com/augustm210/good-neighbor-recovery-network
 - [x] MIT license file in the repository.
 - [x] English README with install and run instructions.
-- [x] Architecture diagram.
+- [x] Architecture diagram: `docs/assets/architecture-diagram.png`; uploaded to the Devpost draft.
 - [x] Public YouTube video: https://youtu.be/54Mvj1xeBw4 (4:19).
-- [x] Local 4:18 video demonstrates the working project and pitches the problem, audience, and importance; H.264/AAC media and six representative frames were QA-checked. Public upload remains required.
-- [x] AWS Builder ID available.
+- [x] The 4:19 video demonstrates the working project and pitches the problem, audience, and importance; H.264/AAC media and six representative frames were QA-checked.
+- [x] Custom YouTube thumbnail uploaded and saved after phone verification.
+- [x] AWS Builder ID entered in the private Devpost submission form.
+- [x] Devpost draft created and completed through Additional info (`4/5`); final terms remain unchecked and the project is not submitted.
 
 ## Score multipliers
 
 - [ ] Public live demo URL. The private IAM-authorized Sydney AgentCore Runtime and its `DEFAULT` endpoint are `READY`, and a real invocation is preserved as evidence.
 - [ ] Publish up to three substantial AWS Builder Center posts with “Agents for Humans” in each title; three distinct drafts are ready in `docs/builder/POST_SERIES.md`.
+- [ ] Replace the Devpost project-card thumbnail placeholder with a polished 3:2 project thumbnail.
 - [x] Repository is public with a project description; the checked-in MIT license is available for GitHub detection.
 - [x] Five consecutive clean Strands graph demo runs from a fresh process (5/5 completed, 80 planned meals, zero policy violations).
 - [ ] Lightweight real-person comprehension/usability evidence; synthetic AI review must remain labeled synthetic.

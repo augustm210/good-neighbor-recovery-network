@@ -104,3 +104,12 @@ Implement one Strands vertical slice on the now-frozen deterministic contract:
 - Extracted and visually inspected representative frames covering the opening, incident, human-decision boundary, recovery, cloud evidence, and closing. The video contains no account IDs, runtime suffixes, session IDs, or physical-delivery claims.
 - Uploaded the QA-checked cut to YouTube, supplied the complete English project description, marked it not made for children, passed YouTube's copyright check, and published it publicly at `https://youtu.be/54Mvj1xeBw4`.
 - Created the public contest repository at `https://github.com/augustm210/good-neighbor-recovery-network` with a concise AgentCore/Strands project description and no server-generated starter files, preserving the local commit history for the initial push.
+
+## 2026-09-10 Devpost submission draft
+
+- Completed YouTube phone verification, uploaded the custom 1280x720 project thumbnail, and verified YouTube Studio reported all changes saved.
+- Created the Devpost project `Good Neighbor Recovery Network` and saved its project name and elevator pitch.
+- Added a truthful English project story, public GitHub repository, public 4:19 YouTube demo, Strands built-with entry, and reproducible testing instructions.
+- Generated and visually QA-checked a 1500x1000 (3:2) architecture diagram covering the bounded agent graph, deterministic policy, human spending gate, AgentCore deployment, and evidence metrics; uploaded it to the Devpost draft.
+- Selected the Good Neighbor Agents track and saved the required private submission fields. Devpost now reports `4/5 steps done` on the finalization page.
+- Intentionally left the terms checkbox unchecked and did not click `Submit project`; the project remains a draft pending final visual and bonus-content review.

@@ -1,5 +1,7 @@
 # Architecture
 
+![Good Neighbor Recovery Network architecture](docs/assets/architecture-diagram.png)
+
 ## Runtime flow
 
 ```mermaid

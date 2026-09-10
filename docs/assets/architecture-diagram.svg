@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07152c"/>
+      <stop offset="0.52" stop-color="#0b2444"/>
+      <stop offset="1" stop-color="#082f3c"/>
+    </linearGradient>
+    <linearGradient id="agent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="policy" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#14b8a6"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="human" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+    <style>
+      .title { font: 700 46px 'Segoe UI', Arial, sans-serif; fill: #f8fafc; }
+      .subtitle { font: 400 21px 'Segoe UI', Arial, sans-serif; fill: #a5c7e8; }
+      .label { font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #f8fafc; }
+      .small { font: 400 17px 'Segoe UI', Arial, sans-serif; fill: #dbeafe; }
+      .micro { font: 600 15px 'Segoe UI', Arial, sans-serif; fill: #bfdbfe; letter-spacing: .4px; }
+      .metric { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #d1fae5; }
+      .line { fill: none; stroke: #93c5fd; stroke-width: 4; marker-end: url(#arrow); }
+      .safe { fill: none; stroke: #34d399; stroke-width: 4; marker-end: url(#arrowGreen); }
+    </style>
+  </defs>
+
+  <rect width="1500" height="1000" fill="url(#bg)"/>
+  <circle cx="1340" cy="90" r="260" fill="#0ea5e9" opacity="0.08"/>
+  <circle cx="90" cy="930" r="280" fill="#22c55e" opacity="0.06"/>
+
+  <text x="70" y="78" class="title">Good Neighbor Recovery Network</text>
+  <text x="72" y="116" class="subtitle">Fail-closed multi-agent recovery on AWS AgentCore · Sydney</text>
+  <g transform="translate(1160,48)">
+    <rect width="270" height="70" rx="18" fill="#ffffff" opacity="0.09" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="24" y="30" class="micro">AGENTS FOR HUMANS</text>
+    <text x="24" y="54" class="small">Good Neighbor Agents</text>
+  </g>
+
+  <!-- Human / judge interface -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="205" width="250" height="220" rx="24" fill="#102b4f" stroke="#60a5fa" stroke-width="2"/>
+    <circle cx="125" cy="260" r="28" fill="#2563eb"/>
+    <path d="M113 260h24M125 248v24" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <text x="170" y="258" class="label">Judge UI</text>
+    <text x="98" y="316" class="small">Operations</text>
+    <text x="98" y="350" class="small">Activity trace</text>
+    <text x="98" y="384" class="small">Human decisions</text>
+  </g>
+
+  <!-- Agent graph -->
+  <g filter="url(#shadow)">
+    <rect x="405" y="168" width="500" height="332" rx="28" fill="#0d2746" stroke="#38bdf8" stroke-width="2"/>
+    <text x="442" y="212" class="label">Bounded Strands Agent Graph</text>
+    <text x="442" y="241" class="small">Each role owns one narrow tool boundary</text>
+
+    <g transform="translate(442,278)">
+      <rect width="130" height="145" rx="20" fill="url(#agent)"/>
+      <circle cx="65" cy="43" r="22" fill="#fff" opacity="0.2"/>
+      <text x="65" y="50" text-anchor="middle" class="label">A</text>
+      <text x="65" y="88" text-anchor="middle" class="micro">ALLOCATION</text>
+      <text x="65" y="116" text-anchor="middle" class="small">propose</text>
+    </g>
+    <g transform="translate(590,278)">
+      <rect width="130" height="145" rx="20" fill="url(#agent)"/>
+      <circle cx="65" cy="43" r="22" fill="#fff" opacity="0.2"/>
+      <text x="65" y="50" text-anchor="middle" class="label">L</text>
+      <text x="65" y="88" text-anchor="middle" class="micro">LOGISTICS</text>
+      <text x="65" y="116" text-anchor="middle" class="small">observe</text>
+    </g>
+    <g transform="translate(738,278)">
+      <rect width="130" height="145" rx="20" fill="url(#agent)"/>
+      <circle cx="65" cy="43" r="22" fill="#fff" opacity="0.2"/>
+      <text x="65" y="50" text-anchor="middle" class="label">R</text>
+      <text x="65" y="88" text-anchor="middle" class="micro">RECOVERY</text>
+      <text x="65" y="116" text-anchor="middle" class="small">patch</text>
+    </g>
+  </g>
+
+  <!-- Deterministic safety plane -->
+  <g filter="url(#shadow)">
+    <rect x="400" y="575" width="760" height="205" rx="28" fill="#0b312f" stroke="#34d399" stroke-width="2.5"/>
+    <rect x="438" y="615" width="305" height="120" rx="20" fill="url(#policy)" opacity="0.94"/>
+    <text x="470" y="654" class="label">Deterministic policy</text>
+    <text x="470" y="687" class="small">capacity · cold chain · time</text>
+    <text x="470" y="718" class="small">budget · version · idempotency</text>
+
+    <rect x="780" y="615" width="340" height="120" rx="20" fill="#123e3b" stroke="#6ee7b7" stroke-width="2"/>
+    <text x="814" y="654" class="label">Atomic reference ledger</text>
+    <text x="814" y="687" class="small">compare-and-swap commit</text>
+    <text x="814" y="718" class="small">state versions + audit result</text>
+  </g>
+
+  <!-- Human approval gate -->
+  <g filter="url(#shadow)">
+    <rect x="1215" y="260" width="220" height="240" rx="28" fill="#3b2412" stroke="#fb923c" stroke-width="2.5"/>
+    <circle cx="1325" cy="325" r="40" fill="url(#human)"/>
+    <path d="M1307 326l13 13 25-30" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1325" y="394" text-anchor="middle" class="label">Human gate</text>
+    <text x="1325" y="428" text-anchor="middle" class="small">USD 32 &gt; USD 20</text>
+    <text x="1325" y="462" text-anchor="middle" class="small">persist · stop · resume</text>
+  </g>
+
+  <!-- AWS runtime -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="575" width="270" height="205" rx="28" fill="#2f2214" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="105" y="625" class="micro" fill="#fde68a">AWS · AP-SOUTHEAST-2</text>
+    <text x="105" y="665" class="label">Bedrock AgentCore</text>
+    <text x="105" y="699" class="small">Python 3.12 Direct Code</text>
+    <text x="105" y="730" class="small">IAM · S3 · CloudWatch</text>
+  </g>
+
+  <!-- Evidence strip -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="850" width="1365" height="92" rx="24" fill="#0d2440" stroke="#335f88" stroke-width="1.5"/>
+    <text x="105" y="884" class="micro">VERIFIABLE EVIDENCE</text>
+    <text x="105" y="919" class="metric">2× AgentCore HTTP 200</text>
+    <text x="410" y="919" class="metric">30 automated tests</text>
+    <text x="700" y="919" class="metric">60 seeded benchmark cases</text>
+    <text x="1070" y="919" class="metric">0 policy violations</text>
+  </g>
+
+  <!-- Data flow -->
+  <path d="M320 315 C355 315 365 315 405 315" class="line"/>
+  <text x="340" y="298" class="micro">invoke</text>
+  <path d="M655 500 L655 575" class="safe"/>
+  <text x="670" y="548" class="micro">validate</text>
+  <path d="M1160 660 C1200 660 1220 560 1280 500" class="line"/>
+  <text x="1193" y="612" class="micro">over budget</text>
+  <path d="M1215 405 C1080 405 1065 510 990 575" class="safe"/>
+  <text x="1055" y="472" class="micro">approved resume</text>
+  <path d="M400 680 C370 680 360 680 340 680" class="line"/>
+  <text x="350" y="663" class="micro">same contract</text>
+  <path d="M205 780 L205 850" class="line"/>
+  <path d="M780 780 L780 850" class="safe"/>
+
+  <text x="72" y="975" class="small" fill="#8fb6d9">Agents propose. Deterministic policy authorizes. Humans control consequential spend.</text>
+</svg>
