@@ -1,8 +1,7 @@
 # AWS Builder Center bonus post series
 
 Publish these as three separate public posts. Each title deliberately contains
-“Agents for Humans”. Replace repository and video placeholders before
-publishing.
+“Agents for Humans”. Each post links to the public evidence repository.
 
 ---
 
@@ -39,7 +38,7 @@ The lesson is simple: useful autonomy needs visible authority boundaries.
 Refusal is not a failed demo here; it is the most important successful behavior
 in the system.
 
-Repository: `TODO_PUBLIC_REPOSITORY_URL`
+Repository: https://github.com/augustm210/good-neighbor-recovery-network
 
 ---
 
@@ -77,7 +76,7 @@ The broader lesson is to treat deployment evidence as a chain: artifact hash,
 least-privilege identity, Runtime status, endpoint status, invocation response,
 and independent logs. A console screenshot alone is not enough.
 
-Repository: `TODO_PUBLIC_REPOSITORY_URL`
+Repository: https://github.com/augustm210/good-neighbor-recovery-network
 
 ---
 
@@ -116,4 +115,4 @@ The same safety claims now have three layers of evidence: automated tests,
 frozen benchmark reports, and paired real AgentCore invocations showing both
 the no-approval boundary and the approved recovery path.
 
-Repository: `TODO_PUBLIC_REPOSITORY_URL`
+Repository: https://github.com/augustm210/good-neighbor-recovery-network

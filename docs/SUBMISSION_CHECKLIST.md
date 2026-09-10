@@ -18,7 +18,7 @@ Official deadline: September 14, 2026 at 5:00 PM PDT.
 
 - [ ] Public live demo URL. The private IAM-authorized Sydney AgentCore Runtime and its `DEFAULT` endpoint are `READY`, and a real invocation is preserved as evidence.
 - [ ] Publish up to three substantial AWS Builder Center posts with “Agents for Humans” in each title; three distinct drafts are ready in `docs/builder/POST_SERIES.md`.
-- [ ] Replace the Devpost project-card thumbnail placeholder with a polished 3:2 project thumbnail.
+- [x] Uploaded a polished 1500x1000 (3:2) Devpost project-card thumbnail.
 - [x] Repository is public with a project description; the checked-in MIT license is available for GitHub detection.
 - [x] Five consecutive clean Strands graph demo runs from a fresh process (5/5 completed, 80 planned meals, zero policy violations).
 - [ ] Lightweight real-person comprehension/usability evidence; synthetic AI review must remain labeled synthetic.

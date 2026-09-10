@@ -113,3 +113,5 @@ Implement one Strands vertical slice on the now-frozen deterministic contract:
 - Generated and visually QA-checked a 1500x1000 (3:2) architecture diagram covering the bounded agent graph, deterministic policy, human spending gate, AgentCore deployment, and evidence metrics; uploaded it to the Devpost draft.
 - Selected the Good Neighbor Agents track and saved the required private submission fields. Devpost now reports `4/5 steps done` on the finalization page.
 - Intentionally left the terms checkbox unchecked and did not click `Submit project`; the project remains a draft pending final visual and bonus-content review.
+- Uploaded and saved a polished 1500x1000 (3:2) project-card thumbnail derived from the QA-approved video visual system.
+- Expanded the Devpost Built With field with the core AgentCore and Strands stack; retained the public repository and video links.
