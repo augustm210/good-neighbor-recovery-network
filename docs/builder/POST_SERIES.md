@@ -3,6 +3,12 @@
 Publish these as three separate public posts. Each title deliberately contains
 “Agents for Humans”. Each post links to the public evidence repository.
 
+Published URLs:
+
+- https://builder.aws.com/content/3J7Zq5QmIfQgQfXTJiNlUkYRnbj/agents-for-humans-why-our-food-recovery-agents-cannot-approve-their-own-spending
+- https://builder.aws.com/content/3J7XiqXwMpHPds7UyTWVtNK2HXQ/agents-for-humans-deploying-a-strands-graph-to-agentcore-when-account-quotas-start-at-zero
+- https://builder.aws.com/content/3J7acoulkrEgzPO669j3HvgXKBl/agents-for-humans-evaluating-safe-recovery-without-inventing-success
+
 ---
 
 ## Post 1 — Agents for Humans: Why Our Food-Recovery Agents Cannot Approve Their Own Spending
