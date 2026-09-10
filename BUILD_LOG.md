@@ -115,3 +115,4 @@ Implement one Strands vertical slice on the now-frozen deterministic contract:
 - Intentionally left the terms checkbox unchecked and did not click `Submit project`; the project remains a draft pending final visual and bonus-content review.
 - Uploaded and saved a polished 1500x1000 (3:2) project-card thumbnail derived from the QA-approved video visual system.
 - Expanded the Devpost Built With field with the core AgentCore and Strands stack; retained the public repository and video links.
+- Created three separate AWS Builder Center article drafts with distinct content IDs, English titles containing `Agents for Humans`, concise descriptions, complete evidence-backed bodies, public repository links, and relevant AgentCore/Strands/AI tags. Verified all three titles in the Builder Center draft list; none were published.
